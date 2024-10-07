@@ -1,0 +1,12 @@
+{
+  "name": "learning-note-template",
+  "version": "0.0.1",
+  "description": "learning note template",
+  "main": "index.js",
+  "scripts": {
+    "log": "sh log.sh",
+    "update": "sh update.sh"
+  },
+  "author": "",
+  "license": "ISC"
+}

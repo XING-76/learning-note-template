@@ -1,0 +1,14 @@
+{
+  "editor.tabSize": 2,
+  "editor.fontFamily": "Fira Code",
+  "editor.fontLigatures": false,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "eslint.format.enable": true,
+  "workbench.colorTheme": "One Dark Pro Darker",
+  "workbench.iconTheme": "material-icon-theme",
+  "files.autoSave": "afterDelay"
+}
