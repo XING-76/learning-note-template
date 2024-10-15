@@ -2,8 +2,17 @@
 
 ### Command Instructions
 
-1. `npm run log`: Update daily log
-2. `npm run update`: Merge updates into `main` (run on the `develop` branch)
+**Update daily log**
+
+```bash
+npm run log
+```
+
+**Merge updates into `main` (run on the `develop` branch)**
+
+```bash
+npm run update
+```
 
 ### Git Flow
 
