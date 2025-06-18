@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "log": "sh log.sh",
+    "release": "sh publish.sh",
     "update": "sh update.sh"
   },
   "author": "",
