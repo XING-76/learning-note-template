@@ -1,3 +1,14 @@
+CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
+if [ "$CURRENT_BRANCH" != "develop" ]; then
+  if git show-ref --verify --quiet refs/heads/develop; then
+    echo "Current branch is '$CURRENT_BRANCH'. Switching to 'develop'..."
+    git checkout develop || { echo "Error: Failed to checkout 'develop'."; exit 1; }
+  else
+    echo "Error: 'develop' branch not found. Aborting."
+    exit 1
+  fi
+fi
+
 CURRENT_DATE=$(date +'%Y.%m.%d')
 
 LOG_JSON="log.json"
