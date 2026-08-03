@@ -1,3 +1,7 @@
+set -e
+# Exit immediately if any command exits with a non-zero status.
+# Without this, a failed sed or commit would still fall through to 'git push'.
+
 CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
 if [ "$CURRENT_BRANCH" != "develop" ]; then
   if git show-ref --verify --quiet refs/heads/develop; then

@@ -11,6 +11,13 @@ if [ "$CURRENT_BRANCH" != "develop" ]; then
   fi
 fi
 
+# Sync with the remote before bumping the version and committing.
+# Otherwise a stale local 'develop' produces a commit that the final push rejects.
+if ! git pull --ff-only origin develop; then
+  echo "Error: 'develop' has diverged from origin/develop. Resolve manually first."
+  exit 1
+fi
+
 # Check if a version has already been released today
 if git log --since=midnight --pretty=%s | grep -q "version release"; then
   printf "⚠️  %s\n" "A version has already been released today."
