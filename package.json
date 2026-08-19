@@ -4,9 +4,13 @@
   "description": "learning note template",
   "main": "index.js",
   "scripts": {
-    "log": "sh log.sh",
-    "release": "sh publish.sh",
-    "update": "sh update.sh"
+    "start": "bash scripts/work-log.sh",
+    "log": "bash scripts/work-log.sh log",
+    "release": "bash scripts/work-log.sh release",
+    "update": "bash scripts/work-log.sh update",
+    "daily": "bash scripts/work-log.sh daily",
+    "ship": "bash scripts/work-log.sh ship",
+    "dry": "bash scripts/work-log.sh --dry-run"
   },
   "author": "",
   "license": "ISC"
